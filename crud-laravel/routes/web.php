@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Models\Task;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,7 +15,9 @@ use App\Http\Controllers\TaskController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $tasks = Task::latest()->paginate(5);
+    return view('index', compact('tasks'));
+    // return view('welcome');
 });
 
 // controlador de recursos ya tienen las rutas integradas solo hace falta conectarlo con el archivo de rutas

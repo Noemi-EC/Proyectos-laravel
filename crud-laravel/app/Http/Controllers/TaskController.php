@@ -16,7 +16,7 @@ class TaskController extends Controller
     {
         // latest extrae desde el último hasta el primero y las almacena en tasks
         // $tasks = Task::latest()->get();
-        // paginate muestra la cantidad de elementos que se moestrará, es un método de bootstrap
+        // paginate muestra la cantidad de elementos que se mostrará, es un método de bootstrap
         $tasks = Task::latest()->paginate(5);
         return view('index', ['tasks' => $tasks]);
     }

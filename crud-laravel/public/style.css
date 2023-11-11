@@ -1,0 +1,12 @@
+.titulo{
+    margin-top: 75px;
+    margin-bottom: 25px;
+}
+.botones{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 25px;
+}
+.botones .btn-lg{
+    margin-left: 20px;
+}
